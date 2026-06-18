@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Heels — Privacy Policy & Account Deletion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f2;
+      --white: #ffffff;
+      --border: #e4e0da;
+      --accent: #b5724a;
+      --accent-bg: #fdf4ee;
+      --text: #1c1917;
+      --muted: #78716c;
+      --subtle: #a8a29e;
+      --radius: 14px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 32px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .topbar-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .topbar-sep { flex: 1; }
+
+    .topbar-tag {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-bg);
+      border: 1px solid #e8c9b4;
+      border-radius: 100px;
+      padding: 5px 14px;
+    }
+
+    /* ── FEATURE BANNER ── */
+    .banner-wrap {
+      padding: 28px 32px 0;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .banner-wrap img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 4px 24px rgba(0,0,0,.09);
+    }
+
+    /* ── HERO TEXT ── */
+    .hero-text {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 32px 36px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-text h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .hero-text .date {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--subtle);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 16px;
+    }
+
+    /* ── NAV ── */
+    .nav-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      background: rgba(247,245,242,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    .nav-wrap a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1px solid transparent;
+      transition: all .18s ease;
+    }
+
+    .nav-wrap a:hover {
+      color: var(--accent);
+      background: var(--accent-bg);
+      border-color: #e8c9b4;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 60px; }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .section-label span {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    /* ── CARDS ── */
+    .card-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+      letter-spacing: .02em;
+    }
+
+    .card p {
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    /* ── NOTICE ── */
+    .notice {
+      display: flex;
+      gap: 14px;
+      background: var(--accent-bg);
+      border: 1px solid #e8c9b4;
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-top: 12px;
+    }
+
+    .notice-icon { font-size: 20px; flex-shrink: 0; line-height: 1.6; }
+
+    .notice p { font-size: 16px; color: #7a4f35; }
+
+    /* ── STEPS ── */
+    .steps { display: flex; flex-direction: column; }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      position: relative;
+    }
+
+    .step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 36px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .step-dot {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--border);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-body { padding-bottom: 28px; }
+
+    .step-body strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      padding-top: 5px;
+    }
+
+    .step-body p { font-size: 16px; color: var(--muted); }
+
+    .mail-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: rgba(181,114,74,.35);
+      text-underline-offset: 3px;
+      transition: text-decoration-color .15s ease;
+    }
+
+    .mail-link:hover { text-decoration-color: var(--accent); }
+
+    /* ── FORM ── */
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 16px;
+      font-size: 17px;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      outline: none;
+      width: 100%;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8a29e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      cursor: pointer;
+    }
+
+    .form-group select option { background: #fff; }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--subtle); }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #d4a27f;
+      box-shadow: 0 0 0 3px rgba(181,114,74,.10);
+      background: #fff;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-submit {
+      margin-top: 8px;
+      width: 100%;
+      padding: 15px 24px;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background .18s ease, transform .15s ease;
+    }
+
+    .form-submit:hover { background: #9e5e37; transform: translateY(-1px); }
+
+    .form-note {
+      font-size: 14px;
+      color: var(--subtle);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 15px;
+      color: var(--subtle);
+      background: var(--white);
+    }
+
+    footer strong { color: var(--accent); font-weight: 600; }
+
+    /* ── RESPONSIVE ── */
+
+    /* Tablet (portrait) */
+    @media (max-width: 768px) {
+      body { font-size: 17px; }
+      .topbar { padding: 16px 24px; }
+      .banner-wrap { padding: 20px 24px 0; }
+      .hero-text { padding: 36px 24px 28px; }
+      .container { padding: 48px 24px 72px; }
+      .form-card { padding: 24px; }
+      .form-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      body { font-size: 16px; }
+      .topbar { padding: 14px 18px; }
+      .topbar-name { font-size: 15px; }
+      .banner-wrap { padding: 14px 14px 0; }
+      .hero-text { padding: 28px 18px 24px; }
+      .nav-wrap { gap: 4px; padding: 12px 14px; }
+      .nav-wrap a { font-size: 13px; padding: 7px 13px; }
+      .container { padding: 36px 18px 60px; }
+      .section h2 { font-size: 1.65rem; }
+      .card p { font-size: 16px; }
+      .step-body strong { font-size: 16px; }
+      .step-body p { font-size: 15px; }
+      .form-card { padding: 18px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+      .form-group input,
+      .form-group select,
+      .form-group textarea { font-size: 16px; }
+      .form-submit { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <img src="Hi_heels.jpeg" alt="Hi Heels logo">
+  <span class="topbar-name">Hi Heels</span>
+  <div class="topbar-sep"></div>
+  <span class="topbar-tag">Legal</span>
+</header>
+
+<!-- FEATURE BANNER -->
+<div class="banner-wrap">
+  <img src="HiHeels_feature_graphic.png" alt="Hi Heels app banner">
+</div>
+
+<!-- HERO TEXT -->
+<div class="hero-text">
+  <h1>Privacy Policy &amp;<br>Account Deletion</h1>
+  <p>Everything you need to know about how Hi Heels handles your data.</p>
+  <span class="date">Last updated: June 2026</span>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="nav-wrap">
+  <a href="#privacy">Privacy Policy</a>
+  <a href="#deletion">Account Deletion</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+  <!-- PRIVACY POLICY -->
+  <section class="section" id="privacy">
+    <div class="section-label"><span>Privacy Policy</span></div>
+    <h2>How we handle your data</h2>
+
+    <div class="card-list">
+      <div class="card">
+        <div class="card-title">About the App</div>
+        <p>Hi Heels is an internal business management application used exclusively by approved team members to manage inventory, orders, and related business operations.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Data We Collect</div>
+        <p>We collect your email address solely for authentication via Google Sign-In. No other personal information is collected beyond what is strictly required for account access.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Business Data</div>
+        <p>Business records entered into the app — including products, orders, and inventory entries — are stored securely using Google Firebase and Google Sheets, and used only for the operation of the business.</p>
+      </div>
+    </div>
+
+    <div class="notice" style="margin-top: 16px;">
+      <div class="notice-icon">🔒</div>
+      <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties for advertising or marketing purposes. All data transmitted by the app is encrypted in transit.</p>
+    </div>
+  </section>
+
+  <!-- ACCOUNT DELETION -->
+  <section class="section" id="deletion">
+    <div class="section-label"><span>Account Deletion</span></div>
+    <h2>How to remove your account</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-dot">1</div>
+        <div class="step-body">
+          <strong>Send a removal request</strong>
+          <p>Email <a href="mailto:Qamarmuhammadwaleed@gmail.com" class="mail-link">Qamarmuhammadwaleed@gmail.com</a> with the subject <em>"Account Removal Request"</em>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot">2</div>
+        <div class="step-body">
+          <strong>Access is revoked</strong>
+          <p>Your account will be blocked from accessing the app upon confirmation of your request.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-dot">3</div>
+        <div class="step-body">
+          <strong>Data retention note</strong>
+          <p>Business records (orders, inventory entries) are retained as part of the company's operational records, as they belong to the business rather than to an individual user.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section" id="contact">
+    <div class="section-label"><span>Contact</span></div>
+    <h2>Get in touch</h2>
+
+    <div class="form-card">
+      <form onsubmit="return handleSubmit(this)">
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group full">
+            <label for="subject">Subject</label>
+            <select id="subject" name="Subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="Privacy Policy Question">Privacy Policy Question</option>
+              <option value="Account Removal Request">Account Removal Request</option>
+              <option value="Data Inquiry">Data Inquiry</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="Describe your query in detail…" required></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="form-submit">Send Message</button>
+        <p class="form-note">Submitting will open your email client with the details pre-filled.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 <strong>Hi Heels</strong>. All rights reserved.
+</footer>
+
+<script>
+  function handleSubmit(form) {
+    const name    = form.Name.value.trim();
+    const email   = form.Email.value.trim();
+    const subject = form.Subject.value;
+    const message = form.Message.value.trim();
+    const body    = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`;
+    window.location.href =
+      `mailto:Qamarmuhammadwaleed@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return false;
+  }
+</script>
+
+</body>
+</html>
